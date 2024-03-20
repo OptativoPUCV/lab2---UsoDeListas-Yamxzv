@@ -49,30 +49,6 @@ List* crea_lista() {
     int *num = (int*)malloc(sizeof(int));
     *num = i;
 
-    if (i % 2 == 0)
-    {
-      pushBack(lista, num);
-    }
-    else
-    {
-      pushFront(lista, num);
-    }
-  }
-
-  void *elemento = firstList(lista);
-  while (elemento != NULL)
-  {
-    if (*((int*) elemento) % 2 == 0)
-    {
-      printf("%d\n", *(int*) elemento);
-    }
-    else
-    {
-      elemento = next(lista);
-      popFront(lista);
-    }
-  }
-
   clean(lista);
   free(lista);
 
