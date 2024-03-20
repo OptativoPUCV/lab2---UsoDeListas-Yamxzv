@@ -49,9 +49,6 @@ List* crea_lista() {
     int *num = (int*)malloc(sizeof(int));
     *num = i;
 
-  clean(lista);
-  free(lista);
-
   return lista;
 }
 
