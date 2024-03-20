@@ -148,6 +148,6 @@ int parentesisBalanceados(char *cadena)
       }
     }
   }
-  if ()
+  
 }
 
