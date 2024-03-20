@@ -48,6 +48,8 @@ List* crea_lista() {
   {
     int *num = (int*)malloc(sizeof(int));
     *num = i;
+    push(lista, num);
+  } 
 
   return lista;
 }
