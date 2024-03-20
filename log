@@ -487,3 +487,19 @@ exercises.c:88:8: error: ‘num’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 8043560
+Wed 20 Mar 2024 08:40:53 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:95:14: error: expected expression before ‘List’
+   95 |         next(List *L)
+      |              ^~~~
+exercises.c:95:22: error: expected ‘;’ before ‘}’ token
+   95 |         next(List *L)
+      |                      ^
+      |                      ;
+   96 |       }
+      |       ~               
+Compilation failed
+fac1c54
