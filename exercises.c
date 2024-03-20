@@ -42,8 +42,41 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-   List* L = create_list();
-   return L;
+  List* lista = create_list();
+  
+  for(int i = 1; i <= 10; i++)
+  {
+    int *num = (int*)malloc(sizeof(int));
+    *num = i;
+
+    if (i % 2 == 0)
+    {
+      pushBack(lista, num);
+    }
+    else
+    {
+      pushFront(lista, num);
+    }
+  }
+
+  void *elemento = firstList(lista);
+  while (elemento != NULL)
+  {
+    if (*((int*) elemento) % 2 == 0)
+    {
+      printf("%d\n", *(int*) elemento);
+    }
+    else
+    {
+      elemento = next(lista);
+      popFront(lista);
+    }
+  }
+
+  clean(lista);
+  free(lista);
+
+  return lista;
 }
 
 /*
