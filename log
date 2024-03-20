@@ -470,3 +470,20 @@ Wed 20 Mar 2024 08:32:17 PM UTC:
  tests:  2|3
 total_score: 20/70
 4a89c94
+Wed 20 Mar 2024 08:39:49 PM UTC: 
+ exercises.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:88:8: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   88 |   *num = (int*)first(L);
+      |        ^
+exercises.c:90:14: error: comparison between pointer and integer [-Werror]
+   90 |   while(*num != NULL)
+      |              ^~
+exercises.c:88:8: error: ‘num’ is used uninitialized [-Werror=uninitialized]
+   88 |   *num = (int*)first(L);
+      |   ~~~~~^~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8043560
