@@ -503,3 +503,13 @@ exercises.c:95:22: error: expected ‘;’ before ‘}’ token
       |       ~               
 Compilation failed
 fac1c54
+Wed 20 Mar 2024 08:40:58 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:95:14: error: expected expression before ‘List’
+   95 |         next(List *L);
+      |              ^~~~
+Compilation failed
+a2ee30b
