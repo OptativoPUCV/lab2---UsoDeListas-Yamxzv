@@ -788,3 +788,28 @@ arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘int *�
 cc1: all warnings being treated as errors
 Compilation failed
 5646131
+Fri 22 Mar 2024 11:23:29 PM UTC: 
+ exercises.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:118:3: error: unknown type name ‘Node’
+  118 |   Node* aux = first(pila);
+      |   ^~~~
+exercises.c:124:7: error: ‘temp’ undeclared (first use in this function)
+  124 |       temp = next(aux);
+      |       ^~~~
+exercises.c:124:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:124:19: error: passing argument 1 of ‘next’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  124 |       temp = next(aux);
+      |                   ^~~
+      |                   |
+      |                   int *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘int *’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+d7c459b
