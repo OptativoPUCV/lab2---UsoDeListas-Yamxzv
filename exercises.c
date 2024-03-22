@@ -121,7 +121,7 @@ void copia_pila(Stack* P1, Stack* P2)
       elem = pop(pila);
       push(P2, elem);
       push(P1, elem);
-      temp = temp->next;
+      temp = next(temp);
     }
   
   
