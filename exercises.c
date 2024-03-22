@@ -120,8 +120,7 @@ void copia_pila(Stack* P1, Stack* P2)
   }
   
   
-  
-  return 0;
+
 }
 /*
 Ejercicio 5.

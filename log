@@ -659,3 +659,9 @@ exercises.c:107:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 1fa8a67
+Fri 22 Mar 2024 11:01:52 PM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  3|2
+total_score: 40/70
+4757f1a
