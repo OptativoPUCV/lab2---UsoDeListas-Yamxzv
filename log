@@ -834,3 +834,9 @@ arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘int *�
 cc1: all warnings being treated as errors
 Compilation failed
 5c22cbb
+Fri 22 Mar 2024 11:26:40 PM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  3|2
+total_score: 40/70
+8d813e0

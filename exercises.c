@@ -106,6 +106,7 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2) 
 {
+  /*
   Stack* pila = create_stack();
   void *elem = pop(P1);
 
@@ -121,9 +122,9 @@ void copia_pila(Stack* P1, Stack* P2)
       aux = pop(pila);
       push(P2, aux);
       push(P1, aux);
-      aux = next(aux);
+      aux = next(a)
     }
-  
+  */
   
   
 
