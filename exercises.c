@@ -145,17 +145,17 @@ int parentesisBalanceados(char *cadena)
   { 
     if (*cadena == '(') 
     {
-          cont++; 
+      cont++; 
     } else if (*cadena == ')') 
     {
-          cont--; 
+      cont--; 
     }
     if (cont < 0) 
     {  
-        return 1;
+      return 1;
     }
     cadena++;
   }
-  return (cont == 0) ? 1 : 0; 
+
 }
 
