@@ -141,13 +141,17 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) 
 {
   int balance = 0;
-  while (*cadena != '\0') { 
-    if (*cadena == '(') {
+  while (*cadena != '\0') 
+  { 
+    if (*cadena == '(') 
+    {
         balance++; 
-    } else if (*cadena == ')') {
+    } else if (*cadena == ')') 
+    {
         balance--; 
     }
-    if (balance < 0) {  
+    if (balance < 0) 
+    {  
         return 0;
     }
     cadena++;
