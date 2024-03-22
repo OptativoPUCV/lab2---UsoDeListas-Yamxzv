@@ -840,3 +840,21 @@ Fri 22 Mar 2024 11:26:40 PM UTC:
  tests:  3|2
 total_score: 40/70
 8d813e0
+Fri 22 Mar 2024 11:31:38 PM UTC: 
+ exercises.c | 18 +++++++++++++++++-
+ 1 file changed, 17 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:161:25: error: expected ‘:’ before ‘;’ token
+  161 |   return (cont == 0) ? 1 ; 0;
+      |                         ^~
+      |                         :
+exercises.c:161:28: error: statement with no effect [-Werror=unused-value]
+  161 |   return (cont == 0) ? 1 ; 0;
+      |                            ^
+exercises.c:162:1: error: control reaches end of non-void function [-Werror=return-type]
+  162 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+6c89846
