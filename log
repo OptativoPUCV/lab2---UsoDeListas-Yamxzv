@@ -685,3 +685,14 @@ exercises.c:113:11: error: unused variable ‘elem’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 b4ab67e
+Fri 22 Mar 2024 11:06:40 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:113:11: error: unused variable ‘elem’ [-Werror=unused-variable]
+  113 |     void *elem = pop(P1);
+      |           ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fd78cbf
