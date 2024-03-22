@@ -671,3 +671,17 @@ Fri 22 Mar 2024 11:02:42 PM UTC:
  tests:  3|2
 total_score: 40/70
 98b2b52
+Fri 22 Mar 2024 11:05:46 PM UTC: 
+ exercises.c | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:111:11: error: implicit declaration of function ‘isEmpty’ [-Werror=implicit-function-declaration]
+  111 |   while (!isEmpty(P1))
+      |           ^~~~~~~
+exercises.c:113:11: error: unused variable ‘elem’ [-Werror=unused-variable]
+  113 |     void *elem = pop(P1);
+      |           ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b4ab67e
