@@ -742,3 +742,9 @@ exercises.c:111:11: error: implicit declaration of function ‘is_empty_stack’
 cc1: all warnings being treated as errors
 Compilation failed
 4abbe97
+Fri 22 Mar 2024 11:18:44 PM UTC: 
+ exercises.c | 21 +++++++++++++--------
+ 1 file changed, 13 insertions(+), 8 deletions(-)
+ tests:  3|2
+total_score: 40/70
+87acce0
