@@ -731,3 +731,14 @@ Fri 22 Mar 2024 11:14:03 PM UTC:
  tests:  3|2
 total_score: 40/70
 02b9ed9
+Fri 22 Mar 2024 11:15:12 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:111:11: error: implicit declaration of function ‘is_empty_stack’ [-Werror=implicit-function-declaration]
+  111 |   while (!is_empty_stack(P1))
+      |           ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4abbe97
