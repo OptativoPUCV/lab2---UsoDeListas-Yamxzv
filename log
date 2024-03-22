@@ -748,3 +748,19 @@ Fri 22 Mar 2024 11:18:44 PM UTC:
  tests:  3|2
 total_score: 40/70
 87acce0
+Fri 22 Mar 2024 11:21:16 PM UTC: 
+ exercises.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:118:3: error: unknown type name ‘Node’
+  118 |   Node* temp = pila->first;
+      |   ^~~~
+exercises.c:118:20: error: invalid use of incomplete typedef ‘Stack’ {aka ‘List’}
+  118 |   Node* temp = pila->first;
+      |                    ^~
+exercises.c:124:18: error: request for member ‘next’ in something not a structure or union
+  124 |       temp = temp->next;
+      |                  ^~
+Compilation failed
+83b9f22

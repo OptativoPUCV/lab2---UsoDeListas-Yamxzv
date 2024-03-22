@@ -115,12 +115,16 @@ void copia_pila(Stack* P1, Stack* P2)
     elem = pop(P1);
   }
 
-  elem = pop(pila);
-  while(elem != NULL)
+  Node* temp = pila->first;
+  while(temp != NULL)
     {
-      push(P2, elem);
       elem = pop(pila);
+      push(P2, elem);
+      push(P1, elem);
+      temp = temp->next;
     }
+  
+  
   
 
   
