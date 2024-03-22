@@ -146,10 +146,12 @@ int parentesisBalanceados(char *cadena)
     if (*cadena == '(') 
     {
       cont++; 
-    } else if (*cadena == ')') 
+    } 
+    else if (*cadena == ')') 
     {
       cont--; 
     }
+    
     if (cont < 0) 
     {  
       return 0;
