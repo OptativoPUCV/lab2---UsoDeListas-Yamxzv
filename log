@@ -614,3 +614,17 @@ exercises.c:152:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 3a9c59f
+Fri 22 Mar 2024 11:00:50 PM UTC: 
+ exercises.c | 34 ++++++++++------------------------
+ 1 file changed, 10 insertions(+), 24 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:10: error: unused variable ‘pila’ [-Werror=unused-variable]
+  135 |   Stack* pila = create_stack();
+      |          ^~~~
+exercises.c:138:1: error: control reaches end of non-void function [-Werror=return-type]
+  138 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+60e17c0

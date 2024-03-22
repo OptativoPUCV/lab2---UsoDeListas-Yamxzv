@@ -106,19 +106,22 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2) 
 {
-  Stack* pila = create_stack();
-  void* elem;
+  Stack* P3 = create_stack();
 
-  while((elem = pop(P1)) != NULL)
+  for (int i = 0; i < get_size(P1); i++)
   {
-    push(pila, elem);
+    void* dato = pop(P1);
+    push(P3, dato);
   }
-
-  while((elem = pop(pila)) != NULL)
+  for (int i = 0; i < get_size(P3); i++)
   {
-    push(P2, elem);
+    void* dato = pop(P3);
+    push(P2, dato);
   }
-    
+  
+  
+  
+  
 }
 /*
 Ejercicio 5.
@@ -131,23 +134,6 @@ int parentesisBalanceados(char *cadena)
 {
   Stack* pila = create_stack();
 
-  for (int i = 0; i < strlen(cadena); i++)
-  {
-    if (cadena[i] == '(')
-    {
-      push(pila, &cadena[i]);
-    }
-    else
-    {
-      if (cadena[i] == ')')
-      {
-        if (pop(pila) == NULL)
-        {
-          return 0;
-        }
-      }
-    }
-  }
   
 }
 
