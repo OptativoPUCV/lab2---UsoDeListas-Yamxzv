@@ -118,9 +118,9 @@ void copia_pila(Stack* P1, Stack* P2)
   {
     void* elem = pop(P3);
     push(P1, elem);
-    push(P2, elem);
   }
 }
+
 /*
 Ejercicio 5.
 La función verifica si la cadena de entrada tiene sus 
