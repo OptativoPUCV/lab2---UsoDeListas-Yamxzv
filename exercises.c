@@ -127,27 +127,61 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
+int juntos(char primero, char segundo)
+{
+  if ((primero == '(' && segundo == ')') ||(primero == '[' && segundo == ']') ||(primero == '{' && segundo == '}'))
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
 int parentesisBalanceados(char *cadena) 
 {
-  int cont = 0;
-  while (*cadena != '\0') 
-  { 
-    if (*cadena == '(') 
+  Stack* pila = create_stack();
+  char *elem = cadena;
+
+  while (*elem != '\0')
+  {
+    if (*elem == '(' || *elem == '[' || *elem == '{'))
     {
-      cont++; 
-    } 
-    else if (*cadena == ')') 
+      char *num = (char*)malloc(sizeof(char));
+      *num = *elem;
+      push(pila, num);
+    }
+    else if (*elem == ')' || *elem == ']' || *elem == '}')
     {
-      cont--; 
+      if (top(pila) == 0 || !juntos(*(char*) top(pila), *elem))
+      {
+        while (top(pila) != 0)
+        {
+          free(pop(pila));
+        }
+        free(pila);
+        return 0;
+      }
+      else
+      {
+        free(pop(pila));
+      }
     }
-    
-    if (cont < 0) 
-    {  
-      return 0;
-    }
-    cadena++;
+    elem++;
   }
-  
-  return (cont == 0) ? 1 : 0; 
+
+  int dato = (top(pila) == 0)
+  while (top(pila) != 0)
+  {
+    free(pop(pila));
+  }
+  free(pila);
+  return dato;
+}
+
+int sonPareja(char c1, char c2){
+  return (c1 == '(' && c2 == ')') || (c1 == '[' && c2 == ']') || (c1 == '{' && c2 == '}');
+
 }
 

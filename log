@@ -962,3 +962,19 @@ Sat 23 Mar 2024 12:10:37 AM UTC:
  1 file changed, 2 deletions(-)
  tests:  0|0
 8641cc8
+Sat 23 Mar 2024 12:25:39 AM UTC: 
+ exercises.c | 54 ++++++++++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 44 insertions(+), 10 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:149:54: error: expected statement before ‘)’ token
+  149 |     if (*elem == '(' || *elem == '[' || *elem == '{'))
+      |                                                      ^
+exercises.c:155:5: error: ‘else’ without a previous ‘if’
+  155 |     else if (*elem == ')' || *elem == ']' || *elem == '}')
+      |     ^~~~
+exercises.c:175:3: error: expected ‘,’ or ‘;’ before ‘while’
+  175 |   while (top(pila) != 0)
+      |   ^~~~~
+Compilation failed
+dfa3be4
