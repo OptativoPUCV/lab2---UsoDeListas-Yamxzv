@@ -127,16 +127,9 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int juntos(char primero, char segundo)
-{
-  if ((primero == '(' && segundo == ')') ||(primero == '[' && segundo == ']') ||(primero == '{' && segundo == '}'))
-  {
-    return 1;
-  }
-  else
-  {
-    return 0;
-  }
+int juntos(char c1, char c2){
+  return (c1 == '(' && c2 == ')') || (c1 == '[' && c2 == ']') || (c1 == '{' && c2 == '}');
+
 }
 
 
@@ -145,7 +138,7 @@ int parentesisBalanceados(char *cadena)
   Stack* pila = create_stack();
   char *elem = cadena;
 
-  while (*elem != '\0')
+  while (*elem)
   {
     if (*elem == '(' || *elem == '[' || *elem == '{')
     {
