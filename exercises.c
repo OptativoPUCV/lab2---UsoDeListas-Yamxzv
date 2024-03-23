@@ -129,37 +129,57 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int sonPareja(char c1, char c2){
-  return (c1 == '(' && c2 == ')') || (c1 == '[' && c2 == ']') || (c1 == '{' && c2 == '}');
-
+int juntos(char primero, char segundo)
+{
+  if ((primero == '(' && segundo == ')') ||(primero == '[' && segundo == ']') ||(primero == '{' && segundo == '}'))
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
 }
 
-int parentesisBalanceados(char *cadena) {
-  Stack* P = create_stack();
-  char *elemento = cadena;
-  while(*elemento){
-    if (*elemento == '(' || *elemento == '[' || *elemento == '{'){
-      char *dato = (char*)malloc(sizeof(char));
-      *dato = *elemento;
-      push(P,dato);
-    }else if (*elemento == ')' || *elemento == ']' || *elemento == '}'){
-      if (top(P) == 0 || !sonPareja(*(char*)top(P), *elemento)){
-        while (top(P) != 0) {
-          free(pop(P));
+
+int parentesisBalanceados(char *cadena) 
+{
+  Stack* pila = create_stack();
+  char *elem = cadena;
+
+  while (*elem != '\0')
+  {
+    if (*elem == '(' || *elem == '[' || *elem == '{')
+    {
+      char *num = (char*)malloc(sizeof(char));
+      *num = *elem;
+      push(pila, num);
+    }
+    else if (*elem == ')' || *elem == ']' || *elem == '}')
+    {
+      if (top(pila) == 0 || !juntos(*(char*)top(pila), *elem))
+      {
+        while (top(pila) != 0)
+        {
+          free(pop(pila));
         }
-        free(P);
+        free(pila);
         return 0;
-      }else {
-        free(pop(P));
+      }
+      else
+      {
+        free(pop(pila));
       }
     }
-    elemento++;
+    elem++;
   }
-  int resultado = (top(P) == 0);
-  while(top(P) != 0){
-    free(pop(P));
+
+  int dato = (top(pila) == 0);
+  while (top(pila) != 0)
+  {
+    free(pop(pila));
   }
-  free(P);
-  return resultado;
+  free(pila);
+  return dato;
 }
 
