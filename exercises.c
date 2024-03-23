@@ -119,7 +119,7 @@ void copia_pila(Stack* P1, Stack* P2)
     int elem = *(int*)pop(pila);
     push(P2, elem);
   }
-
+}
 
 /*
 Ejercicio 5.
