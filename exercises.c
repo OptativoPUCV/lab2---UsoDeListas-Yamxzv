@@ -146,7 +146,7 @@ int parentesisBalanceados(char *cadena)
 
   while (*elem != '\0')
   {
-    if (*elem == '(' || *elem == '[' || *elem == '{'))
+    if (*elem == '(' || *elem == '[' || *elem == '{')
     {
       char *num = (char*)malloc(sizeof(char));
       *num = *elem;
@@ -171,7 +171,7 @@ int parentesisBalanceados(char *cadena)
     elem++;
   }
 
-  int dato = (top(pila) == 0)
+  int dato = (top(pila) == 0);
   while (top(pila) != 0)
   {
     free(pop(pila));
