@@ -144,7 +144,7 @@ int parentesisBalanceados(char *cadena)
   Stack* pila = create_stack();
   char *elem = cadena;
 
-  while (*elem)
+  while (*elem != '\0')
   {
     if (*elem == '(' || *elem == '[' || *elem == '{')
     {
@@ -178,10 +178,5 @@ int parentesisBalanceados(char *cadena)
   }
   free(pila);
   return dato;
-}
-
-int sonPareja(char c1, char c2){
-  return (c1 == '(' && c2 == ')') || (c1 == '[' && c2 == ']') || (c1 == '{' && c2 == '}');
-
 }
 
