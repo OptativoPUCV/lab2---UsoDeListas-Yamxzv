@@ -104,11 +104,6 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-int empty(Stack Px)
-{
-  return (Px.top == -1);
-}
-
 void copia_pila(Stack* P1, Stack* P2) 
 {
   Stack* pila = create_stack();
