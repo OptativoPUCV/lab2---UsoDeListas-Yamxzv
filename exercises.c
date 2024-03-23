@@ -126,7 +126,7 @@ La función verifica si la cadena de entrada tiene sus
 paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
-/*
+
 int juntos(char primero, char segundo)
 {
   if ((primero == '(' && segundo == ')') ||(primero == '[' && segundo == ']') ||(primero == '{' && segundo == '}'))
@@ -138,14 +138,7 @@ int juntos(char primero, char segundo)
     return 0;
   }
 }
-*/
 
-
-int juntos(char c1, char c2)
-{
-  return (c1 == '(' && c2 == ')') || (c1 == '[' && c2 == ']') || (c1 == '{' && c2 == '}');
-
-}
 
 int parentesisBalanceados(char *cadena) 
 {
