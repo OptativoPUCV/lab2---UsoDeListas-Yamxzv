@@ -2315,3 +2315,9 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 323427b
+Sat 23 Mar 2024 12:54:38 AM UTC: 
+ exercises.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+ tests:  9|0
+total_score: 70/70
+7b9c4ca
