@@ -2274,3 +2274,44 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 989de31
+Sat 23 Mar 2024 12:52:14 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:111:26: error: expected statement before ‘)’ token
+  111 |   while (top(P1) != NULL))
+      |                          ^
+exercises.c:113:16: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  113 |     int elem = pop(P1);
+      |                ^~~
+exercises.c:114:16: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  114 |     push(pila, elem);
+      |                ^~~~
+      |                |
+      |                int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:117:28: error: expected statement before ‘)’ token
+  117 |   while (top(pila) != NULL))
+      |                            ^
+exercises.c:119:16: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  119 |     int elem = pop(pila);
+      |                ^~~
+exercises.c:120:14: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  120 |     push(P2, elem);
+      |              ^~~~
+      |              |
+      |              int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+323427b
