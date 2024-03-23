@@ -911,3 +911,23 @@ Fri 22 Mar 2024 11:42:25 PM UTC:
  tests:  6|2
 total_score: 50/70
 e104166
+Sat 23 Mar 2024 12:04:15 AM UTC: 
+ exercises.c | 2 --
+ 1 file changed, 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:118:3: error: unknown type name ‘Node’
+  118 |   Node* aux = first(pila);
+      |   ^~~~
+exercises.c:124:18: error: ‘a’ undeclared (first use in this function)
+  124 |       aux = next(a)
+      |                  ^
+exercises.c:124:18: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:124:20: error: expected ‘;’ before ‘}’ token
+  124 |       aux = next(a)
+      |                    ^
+      |                    ;
+  125 |     }
+      |     ~               
+Compilation failed
+072a2cd
